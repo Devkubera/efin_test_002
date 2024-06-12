@@ -23,10 +23,10 @@ onMounted(async () => {
 
 <template>
   <HomeLayout>
-    <div class="flex p-4 gap-4 text-white text-center">
+    <div class="grid grid-cols-3 p-2 gap-2 text-white text-center h-screen">
       <!-- left -->
-      <div class="flex-grow">
-        <div class="grid gap-4 grid-cols-3 h-screen">
+      <div class="col-span-2">
+        <div class="grid gap-2 grid-cols-3 h-full">
           <div class="bg-stone-600 row-span-2 col-span-2">
             {{ apiData.data.data_1 }}
           </div>
@@ -39,7 +39,7 @@ onMounted(async () => {
         </div>
       </div>
       <!-- right -->
-      <div class="flex-grow bg-violet-950">{{ apiData.data.data_6 }}</div>
+      <div class="bg-violet-950">{{ apiData.data.data_6 }}</div>
     </div>
   </HomeLayout>
 </template>
